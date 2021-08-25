@@ -1,10 +1,8 @@
 // import './App.css';
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import img from "./BEST COMIC TITLE.png";
+import img from "./img/BEST COMIC TITLE.png";
 import { IoMdRefreshCircle } from "react-icons/io";
 import Stars from "./components/Stars";
-import { match } from "minimatch";
 
 function App() {
   const [comic, setComic] = useState();
@@ -13,7 +11,7 @@ function App() {
 
   const page = () => setRandom(Math.round(Math.random() * 600));
 
-  const proxy = "https://cors-anywhere.herokuapp.com";
+  const proxy = "https://thingproxy.freeboard.io/fetch/";
 
   if (!random) {
     page();
@@ -21,18 +19,11 @@ function App() {
 
   useEffect(() => {
     random &&
-      fetch(`${proxy}/xkcd.com/${random}/info.0.json`, {
-        headers: {
-          "X-Requested-With": "wololo",
-        },
-      })
+      fetch(`${proxy}https://xkcd.com/${random}/info.0.json`)
         .then((res) => res.json())
         .then((res) => setComic(res))
         .catch((err) => console.log(err));
   }, [random]);
-
-  console.log(random);
-  console.log(comic);
 
   return (
     <div className="app">

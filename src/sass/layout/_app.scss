@@ -1,7 +1,7 @@
 .app {
   .logo {
     height: 30rem;
-    width: 60rem;
+    width: 50rem;
     margin-left: -12rem;
     margin-top: -2.6rem;
     position: absolute;
@@ -33,12 +33,15 @@
         margin-right: auto;
       }
       .image_comic {
-        width: 60rem;
+        width: 80rem;
         min-height: 30rem;
         border: 2px solid black;
+        @include tablet {
+          width: 60rem;
+        }
       }
       .button_refresh {
-        margin-left: 87%;
+        margin-left: 93%;
         padding: 0rem;
         background-color: transparent;
         border-style: none;
@@ -47,6 +50,9 @@
         text-align: start;
         @include tablet {
           margin-left: 90%;
+        }
+        @include desktop {
+          margin-left: 94%;
         }
         .spin {
           font-size: 2.8rem;

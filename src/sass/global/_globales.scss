@@ -9,8 +9,8 @@ html {
 }
 body {
   font-size: 1.6rem;
-  background-image: radial-gradient(#0099ff 1px, transparent 1px),
-    radial-gradient(#0099ff 1px, transparent 1px);
+  background-image: radial-gradient($colorBackground 1px, transparent 1px),
+    radial-gradient($colorBackground 1px, transparent 1px);
   background-position: 0 0, 25px 25px;
   background-size: 50px 50px;
 }
