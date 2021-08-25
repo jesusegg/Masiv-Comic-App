@@ -1,0 +1,42 @@
+.app {
+  .logo {
+    height: 30rem;
+    width: 60rem;
+    margin-left: -12rem;
+    margin-top: -2.6rem;
+    position: fixed;
+    transform: rotate(-15deg);
+    transform-origin: 0, 0;
+  }
+  main {
+    margin: 10rem;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .container_1 {
+      width: 60%;
+      background-color: blueviolet;
+      margin-left: auto;
+      margin-right: 5%;
+      .button_refresh {
+        margin-left: 90%;
+        padding: 0rem;
+        background-color: transparent;
+        border-style: none;
+        cursor: pointer;
+        padding-top: 0.5rem;
+        text-align: start;
+        .spin {
+          font-size: 2.4rem;
+          margin: 0rem;
+        }
+      }
+    }
+    .container_2 {
+      width: 80%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

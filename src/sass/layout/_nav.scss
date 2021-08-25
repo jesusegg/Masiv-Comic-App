@@ -1,0 +1,16 @@
+.nav {
+  background-color: $colorFondo;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0rem 0rem 0.8rem 0.4rem black;
+
+  p {
+    margin: 0;
+    padding: 1rem;
+    font-family: $fuente_titulo;
+    margin-right: 3rem;
+    font-size: 3rem;
+    color: white;
+  }
+}
