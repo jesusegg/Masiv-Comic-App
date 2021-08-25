@@ -4,31 +4,52 @@
     width: 60rem;
     margin-left: -12rem;
     margin-top: -2.6rem;
-    position: fixed;
+    position: absolute;
     transform: rotate(-15deg);
     transform-origin: 0, 0;
+    @include tablet {
+      height: 20rem;
+      width: 40rem;
+    }
   }
   main {
     margin: 10rem;
-    margin-bottom: 3rem;
+    margin-bottom: 9rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    min-height: 60rem;
+    align-items: center;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
 
     .container_1 {
       width: 60%;
-      background-color: blueviolet;
       margin-left: auto;
       margin-right: 5%;
+      @include tablet {
+        margin-right: auto;
+      }
+      .image_comic {
+        width: 60rem;
+        min-height: 30rem;
+        border: 2px solid black;
+      }
       .button_refresh {
-        margin-left: 90%;
+        margin-left: 87%;
         padding: 0rem;
         background-color: transparent;
         border-style: none;
         cursor: pointer;
         padding-top: 0.5rem;
         text-align: start;
+        @include tablet {
+          margin-left: 90%;
+        }
         .spin {
-          font-size: 2.4rem;
+          font-size: 2.8rem;
           margin: 0rem;
         }
       }
@@ -37,6 +58,35 @@
       width: 80%;
       margin-left: 0;
       margin-right: 0;
+      display: grid;
+      @include tablet {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: center;
+        align-items: center;
+      }
+      .container_2-div {
+        @include tablet {
+          margin: 0 auto;
+        }
+      }
+      p {
+        font-size: 4rem;
+        @include tablet {
+          text-align: center;
+          font-size: 2.4rem;
+        }
+      }
+      .starts {
+        @include tablet {
+          margin-left: 15rem;
+          margin-right: auto;
+          width: 30rem;
+        }
+        width: 50rem;
+        height: 8rem;
+      }
     }
   }
 }

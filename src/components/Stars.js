@@ -21,11 +21,11 @@ const useStyles = makeStyles({
     width: 300,
     display: "grid",
     alignItems: "center",
+    fontSize: "20px",
   },
 });
 
-export default function HoverRating() {
-  const [value, setValue] = React.useState(0);
+export default function HoverRating({ value, setValue }) {
   const [hover, setHover] = React.useState(-1);
   const classes = useStyles();
 

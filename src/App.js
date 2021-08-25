@@ -9,6 +9,7 @@ import { match } from "minimatch";
 function App() {
   const [comic, setComic] = useState();
   const [random, setRandom] = useState();
+  const [value, setValue] = useState(0);
 
   const page = () => setRandom(Math.round(Math.random() * 600));
 
@@ -37,27 +38,37 @@ function App() {
     <div className="app">
       <img className="logo" src={img} alt="best comic title" />
       <nav className="nav">
-        <p>Vol.1</p>
+        <p>Comic Vol.1</p>
       </nav>
       <main>
         <div className="container_1">
+          <button
+            onClick={() => {
+              page();
+              setValue(0);
+            }}
+            className="button_refresh"
+          >
+            <IoMdRefreshCircle className="spin" />
+          </button>
           <img
             className="image_comic"
             src={comic ? comic.img : ""}
             alt={comic ? comic.alt : ""}
           />
-          <button onClick={() => page()} className="button_refresh">
-            <IoMdRefreshCircle className="spin" />
-          </button>
         </div>
         <div className="container_2">
-          <p>tile</p>
-          <p>año</p>
-          <Stars />
+          <div className="container_2-div">
+            <p>{comic ? comic.title : "Title"}</p>
+            <p>{comic ? comic.year : "Year"}</p>
+            <div className="starts">
+              <Stars value={value} setValue={setValue} />
+            </div>
+          </div>
         </div>
       </main>
       <footer className="nav footer">
-        <p>Rate the comic!</p>
+        <p>Rate your comic!</p>
       </footer>
     </div>
   );

@@ -1,15 +1,15 @@
 /** Media Queries **/
-// @mixin telefono {
-//     @media (min-width: #{$telefono}) {
-//         @content;
-//     }
-// }
+@mixin telefono {
+  @media (max-width: #{$telefono}) {
+    @content;
+  }
+}
 
-// @mixin tablet {
-//     @media (min-width: #{$tablet}) {
-//         @content;
-//     }
-// }
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
 
 // @mixin desktop {
 //     @media (min-width: #{$desktop}) {
