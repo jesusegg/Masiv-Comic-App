@@ -1,4 +1,3 @@
-// import './App.css';
 import React, { useState, useEffect } from "react";
 import img from "./img/BEST COMIC TITLE.png";
 import { IoMdRefreshCircle } from "react-icons/io";
@@ -9,12 +8,12 @@ function App() {
   const [random, setRandom] = useState();
   const [value, setValue] = useState(0);
 
-  const page = () => setRandom(Math.round(Math.random() * 600));
+  const setPageRandom = () => setRandom(Math.round(Math.random() * 600));
 
   const proxy = "https://thingproxy.freeboard.io/fetch/";
 
   if (!random) {
-    page();
+    setPageRandom();
   }
 
   useEffect(() => {
@@ -35,7 +34,7 @@ function App() {
         <div className="container_1">
           <button
             onClick={() => {
-              page();
+              setPageRandom();
               setValue(0);
             }}
             className="button_refresh"
